@@ -1,17 +1,23 @@
 package school.sptech;
 
 public class Quadrado extends Figura {
-    private double lado;
+    private Double lado;
 
+
+    public Quadrado() {
+
+    }
+
+    // Construtor
     public Quadrado(double lado) {
         this.lado = lado;
     }
 
-    public double getLado() {
+    public Double getLado() {
         return lado;
     }
 
-    public void setLado(double lado) {
+    public void setLado(Double lado) {
         this.lado = lado;
     }
 
@@ -22,6 +28,6 @@ public class Quadrado extends Figura {
 
     @Override
     public String toString() {
-        return "Quadrado [lado=" + lado + ", área=" + calcularArea() + "]";
+        return "Quadrado [lado=" + lado + ", area=" + calcularArea() + "]";
     }
 }

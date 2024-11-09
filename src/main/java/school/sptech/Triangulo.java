@@ -1,27 +1,33 @@
 package school.sptech;
 
 public class Triangulo extends Figura {
-    private double base;
-    private double altura;
+    private Double base;
+    private Double altura;
 
+
+    public Triangulo() {
+
+    }
+
+    // Construtor
     public Triangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
     }
 
-    public double getBase() {
+    public Double getBase() {
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(Double base) {
         this.base = base;
     }
 
-    public double getAltura() {
+    public Double getAltura() {
         return altura;
     }
 
-    public void setAltura(double altura) {
+    public void setAltura(Double altura) {
         this.altura = altura;
     }
 
@@ -32,6 +38,6 @@ public class Triangulo extends Figura {
 
     @Override
     public String toString() {
-        return "Triangulo [base=" + base + ", altura=" + altura + ", área=" + calcularArea() + "]";
+        return "Triangulo [base=" + base + ", altura=" + altura + ", area=" + calcularArea() + "]";
     }
 }

@@ -1,27 +1,33 @@
 package school.sptech;
 
 public class Retangulo extends Figura {
-    private double base;
-    private double altura;
+    private Double base;
+    private Double altura;
 
+
+    public Retangulo() {
+
+    }
+
+    // Construtor
     public Retangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
     }
 
-    public double getBase() {
+    public Double getBase() {
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(Double base) {
         this.base = base;
     }
 
-    public double getAltura() {
+    public Double getAltura() {
         return altura;
     }
 
-    public void setAltura(double altura) {
+    public void setAltura(Double altura) {
         this.altura = altura;
     }
 
@@ -32,6 +38,6 @@ public class Retangulo extends Figura {
 
     @Override
     public String toString() {
-        return "Retangulo [base=" + base + ", altura=" + altura + ", área=" + calcularArea() + "]";
+        return "Retangulo [base=" + base + ", altura=" + altura + ", area=" + calcularArea() + "]";
     }
 }

@@ -1,9 +1,11 @@
 package school.sptech;
 
 public class Circulo extends Figura {
-    private double raio;
 
-    public Circulo(double raio) {
+    private Double raio;
+
+    public Circulo(String cor, Integer espessura, Double raio) {
+        super(cor, espessura);
         this.raio = raio;
     }
 
@@ -11,21 +13,25 @@ public class Circulo extends Figura {
 
     }
 
-    public double getRaio() {
+    public Double getRaio() {
         return raio;
     }
 
-    public void setRaio(double raio) {
+    public void setRaio(Double raio) {
         this.raio = raio;
     }
 
     @Override
     public Double calcularArea() {
-        return Math.PI * raio * raio;
+        return Math.PI * Math.pow(raio, 2);
     }
 
     @Override
     public String toString() {
-        return "Circulo [raio=" + raio + ", área=" + calcularArea() + "]";
+        return "Circulo{" +
+                "raio=" + raio +
+                ", cor='" + getCor() + '\'' +
+                ", espessura=" + getEspessura() +
+                '}';
     }
 }

@@ -4,14 +4,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Imagem {
-    private List<Figura> figuras = new ArrayList<>();
+    private List<Figura> figuras;
+
+
+    public Imagem() {
+        this.figuras = new ArrayList<>();
+    }
 
     public void adicionar(Figura figura) {
         figuras.add(figura);
     }
 
     public Double calcularSomaDasAreas() {
-        return figuras.stream().mapToDouble(Figura::calcularArea).sum();
+        double soma = 0;
+        for (Figura figura : figuras) {
+            soma += figura.calcularArea();
+        }
+        return soma;
     }
 
     public List<Figura> buscarPorAreaMaiorQue20() {
@@ -25,12 +34,12 @@ public class Imagem {
     }
 
     public List<Figura> buscarQuadrados() {
-        List<Figura> resultado = new ArrayList<>();
+        List<Figura> quadrados = new ArrayList<>();
         for (Figura figura : figuras) {
             if (figura instanceof Quadrado) {
-                resultado.add(figura);
+                quadrados.add(figura);
             }
         }
-        return resultado;
+        return quadrados;
     }
 }
